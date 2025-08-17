@@ -37,33 +37,40 @@
             text-shadow: 0 0 10px #e53e3e;
             margin-bottom: 1rem;
         }
-        .story-list {
-            list-style: none;
-            padding: 0;
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem; /* Space between tiles */
         }
-        .story-list-item {
-            margin-bottom: 1rem;
-            padding: 1rem;
+        .story-tile {
+            display: block;
+            padding: 1.5rem;
             background-color: #2d3748;
             border-radius: 8px;
-            transition: background-color 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            text-decoration: none; /* Remove underline from link */
+            color: inherit;
         }
-        .story-list-item:hover {
+        .story-tile:hover {
+            transform: translateY(-5px);
             background-color: #4a5568;
         }
-        .story-list-item h2 {
+        .story-title {
             font-size: 1.5rem;
-            margin-bottom: 0;
-            border-bottom: none;
-            padding-bottom: 0;
+            font-weight: bold;
+            color: #cbd5e0;
+            margin-bottom: 0.5rem;
         }
-        .story-list-item a {
-            color: #e2e8f0;
-            text-decoration: none;
-            display: block;
+        .story-subtitle {
+            font-size: 1rem;
+            color: #a0aec0;
         }
-        .story-list-item a:hover {
-            text-decoration: underline;
+        .read-more {
+            font-size: 0.9rem;
+            color: #e53e3e;
+            margin-top: 1rem;
+            font-weight: bold;
         }
         footer {
             text-align: center;
@@ -83,30 +90,9 @@
         </header>
 
         <main>
-            <ul class="story-list">
-                <li class="story-list-item">
-                    <a href="cold-wallet.html">
-                        <h2>Cold Wallet</h2>
-                    </a>
-                </li>
-                <li class="story-list-item">
-                    <a href="the-third-share.html">
-                        <h2>The Third Share</h2>
-                    </a>
-                </li>
-                <li class="story-list-item">
-                    <a href="future-bet.html">
-                        <h2>The Future Bet</h2>
-                    </a>
-                </li>
-            </ul>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 The Modern Twilight Zone. All rights reserved. Enter if you dare.</p>
-        </footer>
-    </div>
-</body>
-</html>
+            <a href="cold-wallet.html" class="story-tile">
+                <div class="story-tile-content">
+                    <h3 class="story-title">Cold Wallet</h3>
+                    <p class
 
 
